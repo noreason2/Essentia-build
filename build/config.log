@@ -1,0 +1,85 @@
+# project essentia (2.1-beta2) configured on Fri Jul 31 15:14:35 2015 by
+# waf 1.7.9 (abi 98, python 20706f0 on linux2)
+# using ./waf configure
+#
+----------------------------------------
+Setting top to
+/home/randall/Downloads/essentia-2.1_beta2
+----------------------------------------
+Setting out to
+/home/randall/Downloads/essentia-2.1_beta2/build
+----------------------------------------
+Checking for 'g++' (c++ compiler)
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CXX' -> '/usr/bin/g++'
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='AR' -> '/usr/bin/ar'
+/usr/bin/g++
+----------------------------------------
+Checking for 'gcc' (c compiler)
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='CC' -> '/usr/bin/gcc'
+(tool ar is already loaded, skipping)
+/usr/bin/gcc
+----------------------------------------
+Checking for program pkg-config
+/usr/bin/pkg-config
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games'] var='PKGCONFIG' -> '/usr/bin/pkg-config'
+----------------------------------------
+Checking for 'libavcodec' >= 53.25.0
+['/usr/bin/pkg-config', 'libavcodec >= 53.25.0', '--cflags', '--libs', '--modversion', 'libavcodec']
+out: 54.35.0
+54.35.0
+ -lavcodec  
+
+yes
+----------------------------------------
+Checking for 'libavformat'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'libavformat']
+out: 54.20.4
+ -lavformat  
+
+yes
+----------------------------------------
+Checking for 'libavutil'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'libavutil']
+out: 52.3.0
+ -lavutil  
+
+yes
+----------------------------------------
+Checking for 'libswresample'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'libswresample']
+err: Package libswresample was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libswresample.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libswresample' found
+
+not found
+from /home/randall/Downloads/essentia-2.1_beta2/src: The configuration failed
+----------------------------------------
+Checking for 'fftw3f'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'fftw3f']
+out: 3.3.3
+ -lfftw3f  
+
+yes
+----------------------------------------
+Checking for 'samplerate'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'samplerate']
+out: 0.1.8
+ -lsamplerate  
+
+yes
+----------------------------------------
+Checking for 'taglib' >= 1.9
+['/usr/bin/pkg-config', 'taglib >= 1.9', '--cflags', '--libs', '--modversion', 'taglib']
+out: 1.9.1
+1.9.1
+-I/usr/include/taglib  -ltag  
+
+yes
+----------------------------------------
+Checking for 'yaml-0.1'
+['/usr/bin/pkg-config', '--cflags', '--libs', '--modversion', 'yaml-0.1']
+out: 0.1.4
+ -lyaml  
+
+yes
